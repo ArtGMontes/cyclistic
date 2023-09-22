@@ -1,1 +1,82 @@
-# Cyclistic Project
+---
+title: "MarkyMark"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+date: "2023-09-06"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Headings
+  You can make levels of heading in Rmarkdown documents using hash
+  
+# One hash for bigheadings
+## Two hash for smaller headings
+### Three hash for even smaller headings
+#### and so on ...
+
+# Bold and italics
+
+You can also make things bold and italics using asterik on either side of the text. Use two asteriks for bold and 1 asterisk for ital
+
+**I want this to be bold**
+
+*I want this to be italics*
+
+# Bullet poitns
+
+You can make bullet points with dashes.
+
+ - bullet 1
+ - bullet 2
+ - bullet 3
+ 
+Don´t forget to put a space after the dash to get bullets
+
+# Quotes
+
+Get quotes using a > 
+
+> "there is no such thing as a silly question"
+
+You can insert links with a combination of round and square brackets. Put the text in square brackets and the URL in round brackets
+
+You can find resource from our RMarkdownThrowdown event at [Jen´s github]()
+
+#Pictures/gifts/tweets
+
+Its pretty easy to embed all kinds of things in RMarkdown documents
+
+### Pictures
+
+Use `![](nameofimage.png)`
+
+![](coogeebondi.png)
+
+### Tweets
+
+Use the embed code from Twitter to insert tweets
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A symphony of light and colors. <a href="https://t.co/1b7CnO5MQg">pic.twitter.com/1b7CnO5MQg</a></p>&mdash; monaris (@monaris) <a href="https://twitter.com/monaris/status/1699418987832951221?ref_src=twsrc%5Etfw">September 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+# Gifts
+
+Use the embed code 
+
+# What about code?
+
+We can intersperse notes and code "chunks". Use the insert pull down, or hotkey alt command I. Run the code in each chunk using the green arrow or hotkey Ctrl-shift-enter
+
+# Load packages
+```{r message=FALSE, warning=FALSE}
+library(tidyverse) 
+library(readr)
+```
+
+# Read in the beaches data
+```{r message=FALSE, warning=FALSE}
+beaches <- read_csv("sydneybeaches.csv")
