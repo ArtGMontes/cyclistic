@@ -57,15 +57,8 @@ Use `![](nameofimage.png)`
 
 ![](coogeebondi.png)
 
-### Tweets
 
-Use the embed code from Twitter to insert tweets
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A symphony of light and colors. <a href="https://t.co/1b7CnO5MQg">pic.twitter.com/1b7CnO5MQg</a></p>&mdash; monaris (@monaris) <a href="https://twitter.com/monaris/status/1699418987832951221?ref_src=twsrc%5Etfw">September 6, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-# Gifts
-
-Use the embed code 
 
 # What about code?
 
@@ -77,18 +70,5 @@ library(tidyverse)
 library(readr)
 ```
 
-# Read in the beaches data
-```{r message=FALSE, warning=FALSE}
-beaches <- read_csv("sydneybeaches.csv")
-```
 
-# Plot mean bug levels by site
-```{r}
-beaches %>%
-  group_by(Site) %>%
-  summarise(meanbugs = mean(`Enterococci (cfu/100ml)`, na.rm = TRUE)) %>%
-  ggplot(aes(x = Site, y = meanbugs)) +
-  geom_col() +
-  coord_flip()
-```
 
